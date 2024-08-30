@@ -25,13 +25,22 @@ function WorkCard({ }) {
             </div>
             <div className='flex flex-col items-center'>
                 <Image className='w-48 object-cover -mb-4' width={100} height={100} src={"https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/w_128,dpr_2,fl_progressive:steep,q_auto:low,f_auto,c_limit/images/growth/home-screen/1675326542678-cb4e17.jpeg"} />
-                <button className='w-[max-content] border border-secondary text-secondary px-6 bg-white text-sm py-2 rounded-lg'>Book</button>
+                <button className='w-[max-content] border border-secondary text-secondary px-5 bg-white text-sm py-1.5 rounded-lg'>Book</button>
             </div>
         </div>
     )
 }
 
-function Seperator(){
+function Card({ image, body }) {
+    return (
+        <div className='flex flex-col items-center gap-2'>
+            <Image className='w-16 object-cover rounded-lg' width={200} height={150} alt='Thisis' src={image} />
+            <p className='text-xs font-normal text-primary text-center'>{body}</p>
+        </div>
+    )
+}
+
+function Seperator() {
     return (
         <div className='border'></div>
     )
@@ -40,25 +49,37 @@ function Seperator(){
 export default function Page() {
     const params = useParams();
 
-    const fetchUsers = async () => {
-
+    const fetchPackages = async () => {
+        
     }
 
     return (
         <div className='flex justify-center px-8 py-12'>
             <div className='w-full flex gap-8 justify-between max-w-screen-xl'>
-                <div className='w-[25%]'>
+                <div className='w-[28%]'>
                     <h1 className='text-3xl font-bold'>Bathroom Cleaning</h1>
                     <p>4.83 (2.2 M bookings)</p>
+                    <div className='mt-6 h-[max-content] border px-4 py-6 rounded-lg flex flex-col gap-4 sticky top-10'>
+                        <div className='flex gap-4 items-center'>
+                            <p className='text-sm font-medium text-[rgba(84,84,84,1.00)]'>Select a service</p>
+                            <div className='border flex-1 h-0'></div>
+                        </div>
+                        <div className='grid grid-cols-3 gap-4'>
+                            <Card image={"https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/w_64,dpr_2,fl_progressive:steep,q_auto:low,f_auto,c_limit/images/growth/luminosity/1670408542539-09e49b.jpeg"} body={"Women & Salon spa"} />
+                            <Card image={"https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/w_64,dpr_2,fl_progressive:steep,q_auto:low,f_auto,c_limit/images/growth/luminosity/1670408542539-09e49b.jpeg"} body={"Women & Salon spa"} />
+                            <Card image={"https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/w_64,dpr_2,fl_progressive:steep,q_auto:low,f_auto,c_limit/images/growth/luminosity/1670408542539-09e49b.jpeg"} body={"Women & Salon spa"} />
+                            <Card image={"https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/w_64,dpr_2,fl_progressive:steep,q_auto:low,f_auto,c_limit/images/growth/luminosity/1670408542539-09e49b.jpeg"} body={"Women & Salon spa"} />
+                        </div>
+                    </div>
                 </div>
                 <div className='flex-1 flex gap-8'>
                     <div className='border px-8 py-10 w-[60%] shrink-0 flex flex-col gap-8'>
                         <WorkCard />
-                        <Seperator/>
+                        <Seperator />
                         <WorkCard />
-                        <Seperator/>
+                        <Seperator />
                         <WorkCard />
-                        <Seperator/>
+                        <Seperator />
                         <WorkCard />
                     </div>
                     <div className='h-[max-content] border px-6 py-8 rounded-lg flex gap-4 justify-between sticky top-10'>

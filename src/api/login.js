@@ -1,4 +1,4 @@
-import { public_api } from "./api_client"
+import { public_api } from "./api_client";
 
 export const AccountApi = {
     login: async (body) => {

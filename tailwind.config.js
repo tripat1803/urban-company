@@ -21,7 +21,11 @@ module.exports = {
         "secondary": "rgb(110,66,229)"
       },
       backgroundColor: {
-        "primary": "rgba(15,15,15,1.00)"
+        "primary": "rgba(15,15,15,1.00)",
+        "secondary": "rgb(110,66,229)"
+      },
+      borderColor: {
+        "secondary": "rgb(110,66,229)"
       }
     },
   },

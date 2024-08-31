@@ -24,7 +24,7 @@ function WorkCard({ }) {
                 <button className='text-secondary text-sm mt-4'>View Details</button>
             </div>
             <div className='flex flex-col items-center'>
-                <Image className='w-48 object-cover -mb-4' width={100} height={100} src={"https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/w_128,dpr_2,fl_progressive:steep,q_auto:low,f_auto,c_limit/images/growth/home-screen/1675326542678-cb4e17.jpeg"} />
+                <Image className='w-48 object-cover -mb-4' width={100} height={100} src={"https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/w_128,dpr_2,fl_progressive:steep,q_auto:low,f_auto,c_limit/images/growth/home-screen/1675326542678-cb4e17.jpeg" } alt={"This is an image"} />
                 <button className='w-[max-content] border border-secondary text-secondary px-5 bg-white text-sm py-1.5 rounded-lg'>Book</button>
             </div>
         </div>

@@ -176,7 +176,7 @@ export default function Page() {
 						<h1 className="text-2xl font-semibold">Select a time slot</h1>
 						<div className="grid grid-cols-3 gap-4 mt-4">
 							{slotsAvailable.map((slot) => (
-								<button className="border border-secondary text-secondary px-4 py-2 rounded-lg">
+								<button key={slot} className="border border-secondary text-secondary px-4 py-2 rounded-lg">
 									{new Date(slot.start).toLocaleTimeString()} -{" "}
 									{new Date(slot.end).toLocaleTimeString()}
 								</button>
@@ -204,24 +204,28 @@ export default function Page() {
 							</div>
 							<div className="grid grid-cols-3 gap-4">
 								<Card
+									key={"1"}
 									image={
 										"https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/w_64,dpr_2,fl_progressive:steep,q_auto:low,f_auto,c_limit/images/growth/luminosity/1670408542539-09e49b.jpeg"
 									}
 									body={"Women & Salon spa"}
 								/>
 								<Card
+									key={"2"}
 									image={
 										"https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/w_64,dpr_2,fl_progressive:steep,q_auto:low,f_auto,c_limit/images/growth/luminosity/1670408542539-09e49b.jpeg"
 									}
 									body={"Women & Salon spa"}
 								/>
 								<Card
+								key={"3"}
 									image={
 										"https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/w_64,dpr_2,fl_progressive:steep,q_auto:low,f_auto,c_limit/images/growth/luminosity/1670408542539-09e49b.jpeg"
 									}
 									body={"Women & Salon spa"}
 								/>
 								<Card
+								key={"4"}
 									image={
 										"https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/w_64,dpr_2,fl_progressive:steep,q_auto:low,f_auto,c_limit/images/growth/luminosity/1670408542539-09e49b.jpeg"
 									}

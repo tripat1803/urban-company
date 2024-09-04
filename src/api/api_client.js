@@ -2,7 +2,7 @@ import { store } from "@/store/store";
 import axios from "axios";
 import _ from "lodash";
 
-const baseURL = "http://13.233.155.69:3000";
+const baseURL = "https://proxy-server-red-seven.vercel.app";
 export const public_api = axios.create({
     baseURL: `${baseURL}`
 })
